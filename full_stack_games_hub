@@ -1,0 +1,53 @@
+Questions
+
+
+
+What is responsible for defining the routes of the games resource?
+<!-- gamesRouter in server.js -->
+
+What do you notice about the folder structure? Whats the client responsible for? 
+<!-- The client is responsble for processing user inputs and UI -->
+
+Whats the server responsible for?
+<!-- back-end? -->
+                            
+
+
+What are the the responsibilities of server.js?
+<!-- The server is repsonible for;
+        - Parsing incoming JSON requests (app.use(express.json())
+        - deals with app.use(cors())
+        - Queries to the database, games_hub
+        - Passing gamesCollection to gamesRouter and allowing routing 
+        - listening for any changes on a specific port
+        -->
+
+
+What are the responsibilities of the gamesRouter?
+<!-- It defines routing of request to api/games -->
+
+
+What process does the the client (front-end) use to communicate with the server?
+<!-- The client sends fetch requests in GamesService.js -->
+
+
+What optional second argument does the fetch method take? And what is it used for in this application? Hint: See Using Fetch on the MDN docs
+<!-- The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings 
+It's used in this application to change the fetch type to either POST or Delete?
+-->
+
+
+Which of the games API routes does the front-end application consume (i.e. make requests to)?
+<!-- GET, POST and DELETE -->
+
+
+What are we using the MongoDB Driver for?
+<!-- Allows for our App to connect to MongoDB and work with data. -->
+
+
+Extension
+Why do we need to use ObjectId from the MongoDB driver?
+<!-- ObjectID can be considered globally unique. Allows you to query on any field not just keys or id?
+-->
+
+Add to your diagram the dataflow for removing a game.
